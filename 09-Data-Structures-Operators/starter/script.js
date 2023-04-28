@@ -42,8 +42,100 @@ const restaurant = {
       `Here is your Delicious pasta with ${ing1} , ${ing2} , ${ing3}`
     );
   },
+
+  oderPizza: function (mainingdredients, ...othersingdredients) {
+    console.log(mainingdredients);
+    console.log(othersingdredients);
+  },
 };
 
+/*
+//logical operator
+const rest1 = {
+  name: 'Rara momos',
+  numguest: 20,
+};
+
+const rest2 = {
+  name: 'kancha momos',
+  owner: 'Givoni george',
+};
+
+//or  assigment operator
+// rest2.numberguest = rest1.numguest || 10;
+// rest2.numberguest = rest1.numguest || 10;
+// rest1.numguest ||= 10;
+// rest2.numguest ||= 10;
+
+rest1.numguest ??= 10;
+rest2.numguest ??= 10;
+
+// rest1.owner = rest1.owner && 'Anonymous';
+// rest2.owner = rest2.owner && 'Anonymous';
+
+rest1.owner && = 'Anonymous';
+rest2.owner && = 'Anonymous';
+
+console.log(rest1);
+console.log(rest2);
+*/
+
+/*
+//Use any datatypes,return any datatype,short circuiting
+console.log(4 || 'Parv');
+
+const guest1 = restaurant.numguest ? restaurant.numguest : 10;
+console.log(guest1);
+
+const guest2 = restaurant.numguest || 10;
+console.log(guest2);
+console.log('hello' && 23 && null && 'jonas');
+
+if (restaurant.oderPizza) {
+  restaurant.oderPizza('bhel', 'aloo');
+}
+restaurant.oderPizza && restaurant.oderPizza('mushrooms', 'spinach');
+*/
+
+/*
+//rest
+//spread operator
+const arr = [1, 2, ...[3, 4]];
+
+//rest
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
+
+const [Aloo, , Gobhi, ...otherfood] = [
+  ...restaurant.Mainmenu,
+  ...restaurant.starterMenu,
+];
+
+console.log(Aloo, Gobhi, otherfood);
+
+//objects
+const { sat, ...weekdays } = restaurant.OpeningHour;
+console.log(weekdays);
+
+//2 funtions
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+  console.log(sum);
+};
+
+add(2, 3);
+add(4, 5, 6, 8);
+add(2, 6, 9, 4, 4, 6, 6);
+
+const x = [23, 5, 7];
+add(...x);
+
+restaurant.oderPizza('Mushroom', 'aloo', 'onion', 'oliver');
+restaurant.oderPizza('mushrooms');
+*/
+
+/*
 //Spead Operator
 const NewMenu = [...restaurant.Mainmenu, 'Bidi'];
 console.log(NewMenu);
@@ -80,6 +172,7 @@ console.log(newrestaurant);
 const restaurantcopy = { ...restaurant };
 restaurantcopy.name = 'Shiv Bhandar';
 console.log(restaurant.name);
+*/
 
 /*
 //Destructring objects
@@ -164,3 +257,43 @@ const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(q, p, r);
 
 */
+
+//
+///
+//
+//
+//
+//
+//Coding challnge # 1
+
+const [player1, player2] = game.players;
+console.log(player1, player2);
+
+//2
+const [gk, ...fieldPlayers] = player1;
+console.log(gk, fieldPlayers);
+
+//3
+const allplayer = [...player1, ...player2];
+console.log(allplayer);
+
+//4
+const player1Final = [...player1, 'Lalu Yadav', 'Ramu', 'shamu'];
+
+// 5.
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
+console.log(team1, draw, team2);
+
+// 6.
+const printGoals = function (...players) {
+  console.log(players);
+  console.log(`${players.length} goals were scored`);
+};
+
+printGoals(...game.scored);
+
+// 7.
+team1 < team2 && console.log('Team 1 is more likely to win');
+team1 > team2 && console.log('Team 2 is more likely to win');
