@@ -36,14 +36,54 @@ const restaurant = {
       will be delivered to ${address} at ${time}`
     );
   },
+
+  oderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your Delicious pasta with ${ing1} , ${ing2} , ${ing3}`
+    );
+  },
 };
 
 //Spead Operator
 const NewMenu = [...restaurant.Mainmenu, 'Bidi'];
 console.log(NewMenu);
 
-//Destructring objects
+//copy array
+const Mainmenucopy = [...restaurant.Mainmenu];
+
+//join 2 arrays
+const menu = [...restaurant.starterMenu, ...restaurant.Mainmenu];
+console.log(menu);
+
+//Iterable: array,string,maps, (Not objects)
+const str = 'Parv';
+const letter = [...str, '', 'S.'];
+console.log(letter);
+
+const ingdredients = [
+  prompt("Let's make pasta! Ingredient 1?"),
+  prompt('Ingredient 2?'),
+  prompt('Ingredient 3?'),
+];
+console.log(ingdredients);
+
+restaurant.oderPasta(...ingdredients);
+
+//objects
+const newrestaurant = {
+  foundedIN: 1969,
+  ...restaurant,
+  founder: 'Rinkiya ke papa',
+};
+console.log(newrestaurant);
+
+const restaurantcopy = { ...restaurant };
+restaurantcopy.name = 'Shiv Bhandar';
+console.log(restaurant.name);
+
 /*
+//Destructring objects
+
 restaurant.oderdelivery({
   time: '23:30',
   address: 'Llauyadacolorny,2033',
