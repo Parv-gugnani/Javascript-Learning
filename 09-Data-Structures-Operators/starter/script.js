@@ -1,53 +1,60 @@
 'use strict';
 
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+const hours = {
+  [weekdays[3]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays[4]]: {
+    open: 11,
+    close: 24,
+  },
+  [weekdays[5]]: {
+    open: 0,
+    close: 24,
+  },
+};
+
 const restaurant = {
   name: 'Ghar ka Khana',
   location: '123 abc colony, delhi',
   categories: ['Indian', 'Bhojpuri', 'Italian', 'Organic'],
   starterMenu: ['Bidi', 'Tambaku', 'Aloo-gobhi', 'bhel', 'bread'],
   Mainmenu: ['Aloo', 'Carrot', 'Gobhi'],
-  OpeningHour: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 24,
-    },
-    sat: {
-      open: 0,
-      close: 24,
-    },
-  },
+  //
+  hours,
 
   order: function (starterMenu, Mainmenu) {
     return [this.starterMenu[starterIndex], this.Mainmenu[MainIndex]];
   },
 
-  oderdelivery: function ({
-    starterIndex = 1,
-    MainIndex = 0,
-    time = '20:00',
-    address,
-  }) {
+  oderdelivery({ starterIndex = 1, MainIndex = 0, time = '20:00', address }) {
     console.log(
       `oder recieved ${this.starterMenu[starterIndex]} and {this.Mainmenu[MainIndex]}
       will be delivered to ${address} at ${time}`
     );
   },
 
-  oderPasta: function (ing1, ing2, ing3) {
+  oderPasta(ing1, ing2, ing3) {
     console.log(
       `Here is your Delicious pasta with ${ing1} , ${ing2} , ${ing3}`
     );
   },
 
-  oderPizza: function (mainingdredients, ...othersingdredients) {
+  oderPizza(mainingdredients, ...othersingdredients) {
     console.log(mainingdredients);
     console.log(othersingdredients);
   },
 };
+
+const menu = [...restaurant.starterMenu, ...restaurant.Mainmenu];
+
+for (const item of menu) console.log(item);
+
+for (const [i, el] of menu.entries()) {
+  console.log(`${item[0] + 1}: ${el}`);
+}
 
 /*
 //logical operator
@@ -264,6 +271,8 @@ console.log(q, p, r);
 //
 //
 //
+
+/*
 //Coding challnge # 1
 
 const [player1, player2] = game.players;
@@ -297,3 +306,4 @@ printGoals(...game.scored);
 // 7.
 team1 < team2 && console.log('Team 1 is more likely to win');
 team1 > team2 && console.log('Team 2 is more likely to win');
+*/
