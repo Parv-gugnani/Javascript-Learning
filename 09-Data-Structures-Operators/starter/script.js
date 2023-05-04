@@ -49,6 +49,144 @@ const restaurant = {
 };
 
 /*
+//Working with string Part - 2
+
+const airline = 'TAP Air Portugal';
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+//fix captilization
+const passenger = 'JOnas';
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+//comparing emails
+
+//replacing
+const priceGB = '288,97$';
+const priceUS = priceGB.replace('$', '#').replace(',', '.');
+
+console.log(priceUS);
+
+const announcement = 'All Passangers Come to Boarding Door 23';
+console.log(announcement.replace('Door', 'Gate'));
+console.log(announcement.replace(/Door/g, 'Gate'));
+
+//booleans
+const plane = 'Airbus A320neo';
+console.log(plane.includes('A320'));
+console.log(plane.includes('Boeing'));
+console.log(plane.startsWith('Air'));
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Parts of the NEW Airbus Family');
+}
+
+//practise ex
+console.log('practise ex------------------------');
+const checkbaggage = function (items) {
+  const baggage = items.toLowerCase(); //to lower case is must or we have to add all cases
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are not allowed on plane');
+  } else {
+    console.log('Welcome abroad!');
+  }
+};
+checkbaggage('I have a Laptop, some foof and a pocket Knife');
+checkbaggage('socks and camera');
+checkbaggage('Got some snacks and a gun for protection');
+
+*/
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+/*
+//Working with String Part ---- 1
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B737'[0]);
+
+console.log(airline.length);
+console.log('B737'.length);
+
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('portugal'));
+
+console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
+
+const checkMiddleSeat = function (seat) {
+  // B and E are middle seats
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') console.log('You got the middle seat 😬');
+  else console.log('You got lucky 😎');
+};
+
+checkMiddleSeat('11B');
+checkMiddleSeat('23C');
+checkMiddleSeat('3E');
+
+console.log(new String('jonas'));
+console.log(typeof new String('jonas'));
+
+console.log(typeof new String('jonas').slice(1));
+
+*/
+////////////////////////////////////////////////////////////////////////////
+/*
+//maps
+const rest = new Maps();
+*/
+
+/*
+//Sets
+const oderset = new set(['Aloo', 'bengan', 'Bhindi', 'Aloo', 'Aloo', 'Bhindi']);
+
+console.log(oderset);
+
+console.log(new set('Jonas'));
+
+console.log(oderset.size);
+console.log(oderset.size('Aloo'));
+console.log(oderset.size('Bhindi'));
+oderset.add('Garlic bread');
+oderset.add('Garlic bread');
+oderset.delete('Bhindi');
+console.log(oderset);
+
+for(const oder of odersSet console.log(oder));
+
+//
+const staff =['Waiter','Chef','Waiter','Manager','Chef','Waiter'];
+const staffunique = [...new Set(staff)];
+console.log(staffunique);
+console.log(
+  new Set(['Waiter','Chef','Waiter','Manager','Chef','Waiter']).size
+);
+
+console.log(new set('Parv').size);
+*/
+
+///
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+/*
 //looping
 
 const menu = [...restaurant.starterMenu, ...restaurant.Mainmenu];
