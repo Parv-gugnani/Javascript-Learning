@@ -49,6 +49,75 @@ const restaurant = {
 };
 
 /*
+//Coding challange 4
+const inputElem = document.getElementById('input');
+const convertBtn = document.getElementById('convert-btn');
+const outputElem = document.getElementById('output');
+
+function convertToCamelCase() {
+  const input = inputElem.value;
+  const words = input.split('_');
+  const camelCaseWords = words.map((word, index) => {
+    if (index === 0) {
+      return word;
+    }
+    return word[0].toUpperCase() + word.slice(1);
+  });
+  const camelCase = camelCaseWords.join('');
+  outputElem.textContent = camelCase;
+}
+
+convertBtn.addEventListener('click', convertToCamelCase);
+
+*/
+
+/*
+//working with string part -3
+
+console.log('very good amazing lol'.split('+'));
+console.log('very good amazing lol'.split(' '));
+
+const [firstname, lastname] = 'Parv gugnani'.split(' ');
+const newname = ['Mr.', firstname, lastname.toUpperCase()].join(' ');
+console.log(newname);
+
+const captilizeName = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+  for (const n of names) {
+    //   namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  console.log(namesUpper.join(' '));
+};
+
+captilizeName('Mia and ghia davsi');
+captilizeName('Parv gugnani');
+
+// padding
+
+const message = 'Go to Gate 23';
+console.log(message.padStart(25, '+').padEnd(30, '+'));
+console.log('Parv'.padStart(25, '+').padEnd(30, '+'));
+
+const maskCreditCard = function (number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
+
+console.log(maskCreditCard(454787448948978744444488784848744744447));
+
+//repeat
+
+const message = 'Allo lelo Bengal leloo';
+
+console.log('Lol'.repeat(10));
+
+
+*/
+////////////////////////////////////
+/*
 //Working with string Part - 2
 
 const airline = 'TAP Air Portugal';
