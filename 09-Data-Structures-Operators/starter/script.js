@@ -49,6 +49,18 @@ const restaurant = {
 };
 
 /*
+
+// String Methods Practice
+
+slice() - returns a portion of a string based on the start and end index.
+toUpperCase() - converts a string to all uppercase.
+toLowerCase() - converts a string to all lowercase.
+trim() - removes whitespace from both ends of a string.
+replace() - replaces a specified value or regular expression with a new value.
+split() - splits a string into an array of substrings based on a specified separator.
+indexOf() - returns the index of the first occurrence of a specified value in a string.
+concat() - joins two or more strings together.
+
 // String Methods Practice
 
 const flights =
